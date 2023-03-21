@@ -1,0 +1,4 @@
+2022-09-18 21:00:26,195 INFO scheduler Scheduled Job Start: frappe.website.doctype.web_page.web_page.check_publish_status for ramsay.site
+2022-09-18 21:00:26,463 INFO scheduler Scheduled Job Complete: frappe.website.doctype.web_page.web_page.check_publish_status for ramsay.site
+2022-09-18 21:00:26,521 INFO scheduler Scheduled Job Start: frappe.oauth.delete_oauth2_data for ramsay.site
+2022-09-18 21:00:26,805 INFO scheduler Scheduled Job Complete: frappe.oauth.delete_oauth2_data for ramsay.site

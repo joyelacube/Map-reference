@@ -1,0 +1,671 @@
+2022-09-14 12:25:57,952 DEBUG cd ramsay-bench && python3 -m venv env
+2022-09-14 12:26:00,748 DEBUG cd ramsay-bench && /home/joyel/projects/ramsay-bench/env/bin/python -m pip install --quiet --upgrade pip
+2022-09-14 12:26:19,275 LOG Getting frappe
+2022-09-14 12:26:19,275 DEBUG cd ramsay-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-13 --depth 1 --origin upstream
+2022-09-14 12:26:43,142 LOG Installing frappe
+2022-09-14 12:26:43,142 DEBUG cd /home/joyel/projects/ramsay-bench && /home/joyel/projects/ramsay-bench/env/bin/python -m pip install --quiet --upgrade -e /home/joyel/projects/ramsay-bench/apps/frappe 
+2022-09-14 12:27:39,833 DEBUG cd /home/joyel/projects/ramsay-bench/apps/frappe && yarn install
+2022-09-14 12:28:51,007 DEBUG cd ramsay-bench && bench build
+2022-09-14 12:28:51,150 INFO /usr/local/bin/bench build
+2022-09-14 12:29:22,856 LOG setting up backups
+2022-09-14 12:29:23,057 LOG backups were set up
+2022-09-14 12:29:23,065 INFO Bench ramsay-bench initialized
+2022-09-14 12:30:18,240 INFO /usr/local/bin/bench new-site ramsay.local
+2022-09-14 12:36:45,141 INFO /usr/local/bin/bench new-site ramsay.site
+2022-09-14 12:40:05,764 INFO /usr/local/bin/bench get-app erpnext --branch version-13
+2022-09-14 12:40:21,453 LOG Getting erpnext
+2022-09-14 12:40:21,454 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-13 --depth 1 --origin upstream
+2022-09-14 12:40:47,304 LOG Installing erpnext
+2022-09-14 12:40:47,551 DEBUG cd /home/joyel/projects/ramsay-bench && /home/joyel/projects/ramsay-bench/env/bin/python -m pip install --quiet --upgrade -e /home/joyel/projects/ramsay-bench/apps/erpnext 
+2022-09-14 12:41:42,257 DEBUG cd /home/joyel/projects/ramsay-bench/apps/erpnext && yarn install
+2022-09-14 12:41:43,444 DEBUG bench build --app erpnext
+2022-09-14 12:41:43,592 INFO /usr/local/bin/bench build --app erpnext
+2022-09-14 12:44:07,374 INFO /usr/local/bin/bench --site ramsay.local install-app erpnext
+2022-09-14 12:44:46,173 INFO /usr/local/bin/bench --site ramsay.site install-app erpnext
+2022-09-14 12:48:07,679 INFO /usr/local/bin/bench new-app property
+2022-09-14 12:48:07,685 LOG creating new app property
+2022-09-14 12:49:25,366 LOG Installing property
+2022-09-14 12:49:25,367 DEBUG cd /home/joyel/projects/ramsay-bench && /home/joyel/projects/ramsay-bench/env/bin/python -m pip install --quiet --upgrade -e /home/joyel/projects/ramsay-bench/apps/property 
+2022-09-14 12:49:27,491 DEBUG bench build --app property
+2022-09-14 12:49:27,628 INFO /usr/local/bin/bench build --app property
+2022-09-14 12:53:40,295 INFO /usr/local/bin/bench build --app property
+2022-09-14 12:58:39,479 INFO /usr/local/bin/bench --site ramsay.site add-to-hosts
+2022-09-14 12:58:52,502 INFO /usr/local/bin/bench start
+2022-09-14 12:58:53,226 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 12:58:53,239 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 12:58:53,248 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 12:58:53,278 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 12:58:53,351 INFO /usr/local/bin/bench watch
+2022-09-14 12:58:53,391 INFO /usr/local/bin/bench schedule
+2022-09-14 13:02:05,770 INFO /usr/local/bin/bench start
+2022-09-14 13:02:06,347 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 13:02:06,387 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 13:02:06,467 INFO /usr/local/bin/bench schedule
+2022-09-14 13:02:06,490 INFO /usr/local/bin/bench watch
+2022-09-14 13:02:06,523 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 13:02:06,537 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 13:02:46,284 INFO /usr/local/bin/bench start
+2022-09-14 13:02:46,900 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 13:02:46,940 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 13:02:46,964 INFO /usr/local/bin/bench schedule
+2022-09-14 13:02:46,978 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 13:02:47,011 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 13:02:47,050 INFO /usr/local/bin/bench watch
+2022-09-14 13:33:27,203 INFO /usr/local/bin/bench --site ramsay.site install -app property
+2022-09-14 13:33:27,210 WARNING /usr/local/bin/bench --site ramsay.site install -app property executed with exit code 2
+2022-09-14 13:34:21,013 INFO /usr/local/bin/bench --site ramsay.site install-app property
+2022-09-14 13:34:59,304 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 14:36:40,296 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 14:39:40,047 INFO /usr/local/bin/bench migrate
+2022-09-14 14:42:04,638 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 15:11:25,359 INFO /usr/local/bin/bench migrate
+2022-09-14 15:11:35,052 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 15:41:11,218 INFO /usr/local/bin/bench start
+2022-09-14 15:41:35,481 INFO /usr/local/bin/bench close
+2022-09-14 15:41:46,891 INFO /usr/local/bin/bench --help
+2022-09-14 15:42:16,485 INFO /usr/local/bin/bench start
+2022-09-14 15:45:13,969 INFO /usr/local/bin/bench start
+2022-09-14 15:46:59,597 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 15:47:24,343 INFO /usr/local/bin/bench start
+2022-09-14 15:51:12,073 INFO /usr/local/bin/bench start
+2022-09-14 15:58:23,746 INFO /usr/local/bin/bench start
+2022-09-14 15:58:48,014 INFO /usr/local/bin/bench restart
+2022-09-14 15:58:52,774 INFO /usr/local/bin/bench start
+2022-09-14 16:02:02,738 INFO /usr/local/bin/bench start
+2022-09-14 16:02:03,467 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 16:02:03,556 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 16:02:03,579 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 16:02:03,597 INFO /usr/local/bin/bench watch
+2022-09-14 16:02:03,628 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 16:02:03,634 INFO /usr/local/bin/bench schedule
+2022-09-14 18:00:01,245 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-14 21:14:57,542 INFO /usr/local/bin/bench start
+2022-09-14 21:14:58,062 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 21:14:58,080 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 21:14:58,125 INFO /usr/local/bin/bench watch
+2022-09-14 21:14:58,141 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 21:14:58,146 INFO /usr/local/bin/bench schedule
+2022-09-14 21:14:58,147 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 21:15:28,695 INFO /usr/local/bin/bench start
+2022-09-14 21:15:29,032 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 21:15:29,074 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 21:15:29,102 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 21:15:29,106 INFO /usr/local/bin/bench watch
+2022-09-14 21:15:29,125 INFO /usr/local/bin/bench schedule
+2022-09-14 21:15:29,140 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 22:08:38,811 INFO /usr/local/bin/bench start
+2022-09-14 22:08:39,156 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 22:08:39,202 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 22:08:39,240 INFO /usr/local/bin/bench schedule
+2022-09-14 22:08:39,249 INFO /usr/local/bin/bench watch
+2022-09-14 22:08:39,268 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 22:08:39,285 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 22:15:54,900 INFO /usr/local/bin/bench --site ramsay.site migrate
+2022-09-14 22:16:13,012 INFO /usr/local/bin/bench start
+2022-09-14 22:16:13,372 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 22:16:13,384 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 22:16:13,418 INFO /usr/local/bin/bench watch
+2022-09-14 22:16:13,419 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 22:16:13,433 INFO /usr/local/bin/bench schedule
+2022-09-14 22:16:13,456 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 22:33:07,743 INFO /usr/local/bin/bench start
+2022-09-14 22:33:08,129 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 22:33:08,133 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 22:33:08,195 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 22:33:08,209 INFO /usr/local/bin/bench schedule
+2022-09-14 22:33:08,209 INFO /usr/local/bin/bench watch
+2022-09-14 22:33:08,231 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 22:51:04,626 INFO /usr/local/bin/bench start
+2022-09-14 22:51:05,083 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 22:51:05,083 INFO /usr/local/bin/bench schedule
+2022-09-14 22:51:05,129 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 22:51:05,171 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 22:51:05,182 INFO /usr/local/bin/bench watch
+2022-09-14 22:51:05,188 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:02:41,446 INFO /usr/local/bin/bench start
+2022-09-14 23:02:42,021 INFO /usr/local/bin/bench watch
+2022-09-14 23:02:42,044 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:02:42,081 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 23:02:42,122 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 23:02:42,134 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 23:02:42,153 INFO /usr/local/bin/bench schedule
+2022-09-14 23:04:41,619 INFO /usr/local/bin/bench start
+2022-09-14 23:04:41,972 INFO /usr/local/bin/bench schedule
+2022-09-14 23:04:42,064 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 23:04:42,111 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:04:42,112 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 23:04:42,115 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 23:04:42,138 INFO /usr/local/bin/bench watch
+2022-09-14 23:54:14,146 INFO /usr/local/bin/bench start
+2022-09-14 23:54:14,503 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 23:54:14,532 INFO /usr/local/bin/bench watch
+2022-09-14 23:54:14,540 INFO /usr/local/bin/bench schedule
+2022-09-14 23:54:14,577 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:54:14,578 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 23:54:14,594 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 23:56:05,807 INFO /usr/local/bin/bench start
+2022-09-14 23:56:06,142 INFO /usr/local/bin/bench schedule
+2022-09-14 23:56:06,254 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 23:56:06,324 INFO /usr/local/bin/bench worker --queue long
+2022-09-14 23:56:06,331 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:56:06,334 INFO /usr/local/bin/bench watch
+2022-09-14 23:56:06,339 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 23:57:58,470 INFO /usr/local/bin/bench start
+2022-09-14 23:57:58,825 INFO /usr/local/bin/bench serve --port 8000
+2022-09-14 23:57:58,845 INFO /usr/local/bin/bench schedule
+2022-09-14 23:57:58,885 INFO /usr/local/bin/bench watch
+2022-09-14 23:57:58,952 INFO /usr/local/bin/bench worker --queue default
+2022-09-14 23:57:58,988 INFO /usr/local/bin/bench worker --queue short
+2022-09-14 23:57:58,993 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:00:01,255 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-15 00:01:57,016 INFO /usr/local/bin/bench start
+2022-09-15 00:01:57,335 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:01:57,389 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:01:57,489 INFO /usr/local/bin/bench watch
+2022-09-15 00:01:57,490 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:01:57,537 INFO /usr/local/bin/bench schedule
+2022-09-15 00:01:57,562 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:05:27,822 INFO /usr/local/bin/bench start
+2022-09-15 00:05:28,193 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:05:28,210 INFO /usr/local/bin/bench watch
+2022-09-15 00:05:28,266 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:05:28,336 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:05:28,365 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:05:28,366 INFO /usr/local/bin/bench schedule
+2022-09-15 00:08:39,735 INFO /usr/local/bin/bench start
+2022-09-15 00:08:40,202 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:08:40,216 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:08:40,251 INFO /usr/local/bin/bench watch
+2022-09-15 00:08:40,256 INFO /usr/local/bin/bench schedule
+2022-09-15 00:08:40,264 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:08:40,278 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:12:19,805 INFO /usr/local/bin/bench start
+2022-09-15 00:12:20,166 INFO /usr/local/bin/bench watch
+2022-09-15 00:12:20,189 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:12:20,222 INFO /usr/local/bin/bench schedule
+2022-09-15 00:12:20,223 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:12:20,303 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:12:20,313 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:14:07,940 INFO /usr/local/bin/bench start
+2022-09-15 00:14:08,287 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:14:08,342 INFO /usr/local/bin/bench schedule
+2022-09-15 00:14:08,391 INFO /usr/local/bin/bench watch
+2022-09-15 00:14:08,459 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:14:08,473 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:14:08,485 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:18:40,842 INFO /usr/local/bin/bench start
+2022-09-15 00:18:41,178 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 00:18:41,244 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 00:18:41,284 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 00:18:41,286 INFO /usr/local/bin/bench watch
+2022-09-15 00:18:41,342 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 00:18:41,349 INFO /usr/local/bin/bench schedule
+2022-09-15 07:00:02,094 INFO /usr/local/bin/bench start
+2022-09-15 07:00:02,662 INFO /usr/local/bin/bench schedule
+2022-09-15 07:00:02,680 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 07:00:02,750 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 07:00:02,767 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 07:00:02,776 INFO /usr/local/bin/bench watch
+2022-09-15 07:00:02,823 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 09:29:25,250 INFO /usr/local/bin/bench start
+2022-09-15 09:29:25,886 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 09:29:25,940 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 09:29:25,965 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 09:29:25,967 INFO /usr/local/bin/bench schedule
+2022-09-15 09:29:26,022 INFO /usr/local/bin/bench watch
+2022-09-15 09:29:26,023 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 12:00:01,941 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-15 18:00:02,346 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-15 21:13:45,184 INFO /usr/local/bin/bench start
+2022-09-15 21:13:45,934 INFO /usr/local/bin/bench watch
+2022-09-15 21:13:45,937 INFO /usr/local/bin/bench schedule
+2022-09-15 21:13:45,981 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 21:13:45,992 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 21:13:46,022 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 21:13:46,041 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 22:33:20,656 INFO /usr/local/bin/bench start
+2022-09-15 22:33:21,437 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 22:33:21,480 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 22:33:21,517 INFO /usr/local/bin/bench schedule
+2022-09-15 22:33:21,525 INFO /usr/local/bin/bench watch
+2022-09-15 22:33:21,529 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 22:33:21,531 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 22:36:43,020 INFO /usr/local/bin/bench start
+2022-09-15 22:36:43,553 INFO /usr/local/bin/bench schedule
+2022-09-15 22:36:43,635 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 22:36:43,668 INFO /usr/local/bin/bench watch
+2022-09-15 22:36:43,708 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 22:36:43,759 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 22:36:43,783 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 22:48:48,533 INFO /usr/local/bin/bench start
+2022-09-15 22:48:49,046 INFO /usr/local/bin/bench schedule
+2022-09-15 22:48:49,176 INFO /usr/local/bin/bench watch
+2022-09-15 22:48:49,219 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 22:48:49,223 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 22:48:49,262 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 22:48:49,271 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 22:50:39,195 INFO /usr/local/bin/bench start
+2022-09-15 22:50:39,762 INFO /usr/local/bin/bench schedule
+2022-09-15 22:50:39,781 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 22:50:39,904 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 22:50:39,934 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 22:50:40,012 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 22:50:40,036 INFO /usr/local/bin/bench watch
+2022-09-15 23:04:23,046 INFO /usr/local/bin/bench start
+2022-09-15 23:04:23,658 INFO /usr/local/bin/bench watch
+2022-09-15 23:04:23,699 INFO /usr/local/bin/bench schedule
+2022-09-15 23:04:23,775 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:04:23,789 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:04:23,816 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:04:23,832 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 23:06:44,328 INFO /usr/local/bin/bench start
+2022-09-15 23:06:44,863 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:06:44,982 INFO /usr/local/bin/bench schedule
+2022-09-15 23:06:45,012 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:06:45,023 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:06:45,038 INFO /usr/local/bin/bench watch
+2022-09-15 23:06:45,113 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 23:15:50,451 INFO /usr/local/bin/bench start
+2022-09-15 23:15:51,004 INFO /usr/local/bin/bench schedule
+2022-09-15 23:15:51,018 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:15:51,040 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:15:51,170 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 23:15:51,183 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:15:51,224 INFO /usr/local/bin/bench watch
+2022-09-15 23:19:30,676 INFO /usr/local/bin/bench start
+2022-09-15 23:19:31,166 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:19:31,170 INFO /usr/local/bin/bench watch
+2022-09-15 23:19:31,299 INFO /usr/local/bin/bench schedule
+2022-09-15 23:19:31,317 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 23:19:31,385 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:19:31,398 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:20:49,873 INFO /usr/local/bin/bench start
+2022-09-15 23:20:50,396 INFO /usr/local/bin/bench schedule
+2022-09-15 23:20:50,495 INFO /usr/local/bin/bench watch
+2022-09-15 23:20:50,517 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:20:50,553 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:20:50,599 INFO /usr/local/bin/bench worker --queue long
+2022-09-15 23:20:50,612 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:22:12,492 INFO /usr/local/bin/bench start
+2022-09-15 23:22:13,054 INFO /usr/local/bin/bench worker --queue short
+2022-09-15 23:22:13,126 INFO /usr/local/bin/bench schedule
+2022-09-15 23:22:13,135 INFO /usr/local/bin/bench worker --queue default
+2022-09-15 23:22:13,161 INFO /usr/local/bin/bench serve --port 8000
+2022-09-15 23:22:13,239 INFO /usr/local/bin/bench watch
+2022-09-15 23:22:13,248 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 09:16:37,498 INFO /usr/local/bin/bench start
+2022-09-16 09:16:38,223 INFO /usr/local/bin/bench schedule
+2022-09-16 09:16:38,237 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 09:16:38,259 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 09:16:38,281 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 09:16:38,281 INFO /usr/local/bin/bench watch
+2022-09-16 09:16:38,307 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 12:00:02,461 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-16 13:47:58,305 INFO /usr/local/bin/bench start
+2022-09-16 13:47:58,983 INFO /usr/local/bin/bench schedule
+2022-09-16 13:47:59,112 INFO /usr/local/bin/bench watch
+2022-09-16 13:47:59,145 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 13:47:59,149 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 13:47:59,220 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 13:47:59,286 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 13:52:20,323 INFO /usr/local/bin/bench start
+2022-09-16 13:52:20,933 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 13:52:21,060 INFO /usr/local/bin/bench schedule
+2022-09-16 13:52:21,074 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 13:52:21,148 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 13:52:21,157 INFO /usr/local/bin/bench watch
+2022-09-16 13:52:21,180 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 13:56:46,190 INFO /usr/local/bin/bench start
+2022-09-16 13:56:46,803 INFO /usr/local/bin/bench schedule
+2022-09-16 13:56:46,808 INFO /usr/local/bin/bench watch
+2022-09-16 13:56:46,868 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 13:56:46,938 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 13:56:46,949 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 13:56:46,977 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 14:42:56,745 INFO /usr/local/bin/bench start
+2022-09-16 14:42:57,309 INFO /usr/local/bin/bench watch
+2022-09-16 14:42:57,359 INFO /usr/local/bin/bench schedule
+2022-09-16 14:42:57,430 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 14:42:57,436 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 14:42:57,482 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 14:42:57,523 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 15:14:18,821 INFO /usr/local/bin/bench start
+2022-09-16 15:14:19,347 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 15:14:19,519 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 15:14:19,540 INFO /usr/local/bin/bench schedule
+2022-09-16 15:14:19,549 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 15:14:19,587 INFO /usr/local/bin/bench watch
+2022-09-16 15:14:19,615 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 15:15:52,219 INFO /usr/local/bin/bench start
+2022-09-16 15:15:53,015 INFO /usr/local/bin/bench schedule
+2022-09-16 15:15:53,048 INFO /usr/local/bin/bench watch
+2022-09-16 15:15:53,072 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 15:15:53,077 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 15:15:53,078 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 15:15:53,089 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 15:17:34,812 INFO /usr/local/bin/bench start
+2022-09-16 15:17:35,439 INFO /usr/local/bin/bench worker --queue short
+2022-09-16 15:17:35,477 INFO /usr/local/bin/bench serve --port 8000
+2022-09-16 15:17:35,564 INFO /usr/local/bin/bench schedule
+2022-09-16 15:17:35,654 INFO /usr/local/bin/bench watch
+2022-09-16 15:17:35,700 INFO /usr/local/bin/bench worker --queue default
+2022-09-16 15:17:35,731 INFO /usr/local/bin/bench worker --queue long
+2022-09-16 18:00:02,274 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-17 15:45:05,029 INFO /usr/local/bin/bench start
+2022-09-17 15:45:05,547 INFO /usr/local/bin/bench worker --queue long
+2022-09-17 15:45:05,590 INFO /usr/local/bin/bench worker --queue short
+2022-09-17 15:45:05,619 INFO /usr/local/bin/bench worker --queue default
+2022-09-17 15:45:05,619 INFO /usr/local/bin/bench serve --port 8000
+2022-09-17 15:45:05,626 INFO /usr/local/bin/bench watch
+2022-09-17 15:45:05,643 INFO /usr/local/bin/bench schedule
+2022-09-17 18:00:02,267 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-18 20:30:52,602 INFO /usr/local/bin/bench start
+2022-09-18 20:30:53,137 INFO /usr/local/bin/bench schedule
+2022-09-18 20:30:53,179 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:30:53,189 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:30:53,199 INFO /usr/local/bin/bench watch
+2022-09-18 20:30:53,211 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:30:53,215 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:36:15,689 INFO /usr/local/bin/bench start
+2022-09-18 20:39:24,845 INFO /usr/local/bin/bench start
+2022-09-18 20:42:37,912 INFO /usr/local/bin/bench start
+2022-09-18 20:42:38,480 INFO /usr/local/bin/bench schedule
+2022-09-18 20:42:38,506 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:42:38,510 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:42:38,514 INFO /usr/local/bin/bench watch
+2022-09-18 20:42:38,528 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:42:38,544 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:49:38,795 INFO /usr/local/bin/bench start
+2022-09-18 20:49:39,095 INFO /usr/local/bin/bench watch
+2022-09-18 20:49:39,181 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:49:39,249 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:49:39,277 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:49:39,291 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:49:39,295 INFO /usr/local/bin/bench schedule
+2022-09-18 20:51:58,089 INFO /usr/local/bin/bench start
+2022-09-18 20:51:58,626 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:51:58,646 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:51:58,636 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:51:58,682 INFO /usr/local/bin/bench watch
+2022-09-18 20:51:58,689 INFO /usr/local/bin/bench schedule
+2022-09-18 20:51:58,693 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:54:21,512 INFO /usr/local/bin/bench start
+2022-09-18 20:54:21,930 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:54:21,970 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:54:21,974 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:54:22,044 INFO /usr/local/bin/bench schedule
+2022-09-18 20:54:22,057 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:54:22,075 INFO /usr/local/bin/bench watch
+2022-09-18 20:56:12,600 INFO /usr/local/bin/bench start
+2022-09-18 20:56:12,922 INFO /usr/local/bin/bench watch
+2022-09-18 20:56:12,994 INFO /usr/local/bin/bench worker --queue short
+2022-09-18 20:56:12,997 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:56:13,037 INFO /usr/local/bin/bench schedule
+2022-09-18 20:56:13,041 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:56:13,048 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:57:12,965 INFO /usr/local/bin/bench start
+2022-09-18 20:57:13,341 INFO /usr/local/bin/bench serve --port 8000
+2022-09-18 20:57:13,389 INFO /usr/local/bin/bench schedule
+2022-09-18 20:57:13,419 INFO /usr/local/bin/bench watch
+2022-09-18 20:57:13,432 INFO /usr/local/bin/bench worker --queue default
+2022-09-18 20:57:13,444 INFO /usr/local/bin/bench worker --queue long
+2022-09-18 20:57:13,464 INFO /usr/local/bin/bench worker --queue short
+2022-09-19 00:00:01,529 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-19 09:31:38,002 INFO /usr/local/bin/bench start
+2022-09-19 09:31:38,499 INFO /usr/local/bin/bench watch
+2022-09-19 09:31:38,558 INFO /usr/local/bin/bench worker --queue long
+2022-09-19 09:31:38,572 INFO /usr/local/bin/bench schedule
+2022-09-19 09:31:38,591 INFO /usr/local/bin/bench worker --queue short
+2022-09-19 09:31:38,608 INFO /usr/local/bin/bench worker --queue default
+2022-09-19 09:31:38,611 INFO /usr/local/bin/bench serve --port 8000
+2022-09-19 12:00:01,903 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-19 18:00:02,245 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-20 12:00:01,978 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-20 18:00:01,661 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-21 12:00:01,487 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-21 18:00:01,588 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-22 12:00:01,969 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-22 18:00:01,864 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-23 12:00:01,948 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-23 18:00:01,303 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-26 12:00:02,187 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-26 18:00:02,137 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-27 12:00:02,392 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-27 18:00:01,691 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-28 12:00:01,514 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-28 18:00:01,817 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-29 12:00:02,333 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-29 18:00:02,218 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-30 12:00:01,541 INFO /usr/local/bin/bench --verbose --site all backup
+2022-09-30 18:00:01,697 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-03 12:00:01,787 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-03 18:00:01,901 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-04 12:00:02,022 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-04 18:00:02,453 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-05 00:00:02,340 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-05 12:00:01,361 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-05 18:00:01,629 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-06 12:00:01,521 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-06 18:00:01,563 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-07 12:00:01,973 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-07 18:00:02,045 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-08 12:00:01,461 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-10 12:00:01,598 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-10 18:00:01,424 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-11 12:00:01,623 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-12 12:00:02,152 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-13 12:00:01,719 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-13 18:00:01,776 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-14 12:00:01,809 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-14 18:00:02,320 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-17 12:00:02,053 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-17 18:00:02,275 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-18 12:00:01,511 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-18 18:00:02,300 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-19 12:00:02,216 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-19 18:00:01,839 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-20 12:00:01,949 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-20 18:00:02,192 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-24 12:00:01,439 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-24 18:00:01,968 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-25 12:00:02,068 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-25 18:00:02,067 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-26 12:00:02,221 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-26 18:00:02,295 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-27 12:00:01,350 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-27 18:00:02,057 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-28 12:00:01,873 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-28 18:00:02,285 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-31 12:00:01,394 INFO /usr/local/bin/bench --verbose --site all backup
+2022-10-31 18:00:02,336 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-02 12:00:02,051 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-02 18:00:01,902 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-03 12:00:01,412 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-03 18:00:01,514 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-04 12:00:01,986 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-04 18:00:02,191 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-05 00:00:01,624 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-07 12:00:02,349 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-07 18:00:02,291 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-08 12:00:01,691 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-08 18:00:01,771 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-09 12:00:01,722 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-09 18:00:02,007 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-11 12:00:02,104 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-11 18:00:02,408 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-14 12:00:01,871 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-14 18:00:01,499 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-15 12:00:02,259 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-15 18:00:01,546 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-16 12:00:01,794 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-16 18:00:01,677 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-17 12:00:01,995 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-17 18:00:01,620 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-18 12:00:01,583 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-18 18:00:01,469 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-22 12:00:02,250 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-22 18:00:01,885 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-23 12:00:01,380 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-23 18:00:01,704 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-24 12:00:01,842 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-24 18:00:01,599 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-25 12:00:01,962 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-25 18:00:01,795 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-28 12:00:02,312 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-28 18:00:02,104 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-29 12:00:02,231 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-29 18:00:01,724 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-30 12:00:02,358 INFO /usr/local/bin/bench --verbose --site all backup
+2022-11-30 18:00:01,672 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-01 12:00:01,416 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-01 16:31:04,804 INFO /usr/local/bin/bench start
+2022-12-01 16:31:05,455 INFO /usr/local/bin/bench worker --queue default
+2022-12-01 16:31:05,495 INFO /usr/local/bin/bench worker --queue long
+2022-12-01 16:31:05,524 INFO /usr/local/bin/bench serve --port 8000
+2022-12-01 16:31:05,527 INFO /usr/local/bin/bench schedule
+2022-12-01 16:31:05,529 INFO /usr/local/bin/bench watch
+2022-12-01 16:31:05,542 INFO /usr/local/bin/bench worker --queue short
+2022-12-01 18:00:01,506 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-02 12:00:02,021 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-02 18:00:01,650 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-05 12:00:01,503 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-05 18:00:02,393 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-06 12:00:01,641 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-06 18:00:01,672 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-07 12:00:02,429 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-07 18:00:02,122 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-08 12:00:01,749 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-08 18:00:02,517 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-09 12:00:01,978 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-10 00:00:02,013 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-13 12:00:01,726 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-14 12:00:02,322 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-14 18:00:01,879 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-14 20:28:54,301 INFO /usr/local/bin/bench start
+2022-12-14 20:28:54,808 INFO /usr/local/bin/bench worker --queue short
+2022-12-14 20:28:54,846 INFO /usr/local/bin/bench worker --queue long
+2022-12-14 20:28:54,911 INFO /usr/local/bin/bench watch
+2022-12-14 20:28:54,917 INFO /usr/local/bin/bench serve --port 8000
+2022-12-14 20:28:54,966 INFO /usr/local/bin/bench schedule
+2022-12-14 20:28:54,973 INFO /usr/local/bin/bench worker --queue default
+2022-12-15 12:00:02,382 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-15 18:00:02,170 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-16 12:00:02,305 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-16 18:00:02,036 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-19 00:00:02,430 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-19 12:00:01,566 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-19 18:00:02,476 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-20 12:00:01,746 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-20 18:00:02,488 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-21 12:00:02,289 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-21 18:00:01,625 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-22 06:00:01,442 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-22 12:00:01,966 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-22 18:00:01,958 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-23 12:00:02,293 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-26 12:00:01,967 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-26 18:00:01,992 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-27 12:00:02,169 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-27 18:00:01,855 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-28 12:00:02,026 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-28 18:00:02,752 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-29 12:00:02,209 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-29 18:00:01,525 INFO /usr/local/bin/bench --verbose --site all backup
+2022-12-30 12:00:02,299 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-02 12:00:02,377 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-02 18:00:02,187 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-03 12:00:01,816 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-03 18:00:02,452 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-04 12:00:02,322 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-04 18:00:01,849 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-05 12:00:01,889 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-05 18:00:01,923 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-06 12:00:01,539 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-06 18:00:20,768 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-09 12:00:02,225 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-09 18:00:02,353 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-11 12:00:02,498 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-11 18:00:02,383 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-12 12:00:02,476 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-12 18:00:02,298 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-13 12:00:01,941 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-13 18:00:02,574 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-16 12:00:02,376 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-17 12:00:02,171 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-18 12:00:01,978 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-18 18:00:02,904 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-19 12:00:02,327 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-19 18:00:02,432 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-20 12:00:02,531 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-23 12:00:01,862 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-23 18:00:01,555 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-24 12:00:02,186 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-24 18:00:01,962 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-25 12:00:02,460 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-25 18:00:02,026 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-27 12:00:01,603 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-27 18:00:01,917 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-30 12:00:01,747 INFO /usr/local/bin/bench --verbose --site all backup
+2023-01-30 18:00:01,631 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-01 12:00:01,837 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-01 18:00:01,894 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-02 00:00:01,592 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-02 12:00:02,201 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-02 18:00:01,564 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-03 12:00:01,741 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-03 18:00:02,341 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-04 12:00:01,534 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-06 12:00:02,367 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-06 18:00:01,832 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-07 12:00:02,124 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-07 18:00:01,790 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-09 12:00:01,683 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-09 18:00:01,535 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-10 12:00:02,675 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-11 18:00:02,428 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-13 12:00:02,428 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-13 18:00:01,692 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-14 12:00:01,950 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-14 18:00:01,750 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-15 12:00:01,717 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-15 18:00:02,457 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-16 12:00:01,805 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-17 12:00:01,879 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-17 18:00:02,428 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-21 12:00:01,613 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-21 18:00:02,315 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-22 12:00:01,645 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-22 18:00:01,739 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-23 12:00:01,725 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-23 18:00:02,488 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-24 12:00:01,825 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-24 18:00:02,534 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-27 12:00:02,327 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-27 18:00:01,671 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-28 12:00:02,234 INFO /usr/local/bin/bench --verbose --site all backup
+2023-02-28 18:00:02,540 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-01 12:00:01,823 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-01 18:00:01,997 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-02 12:00:01,894 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-02 18:00:02,275 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-03 12:00:01,787 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-03 18:00:02,402 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-04 12:00:01,866 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-06 12:00:02,389 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-06 18:00:01,980 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-07 12:00:02,591 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-07 18:00:03,257 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-08 12:00:01,857 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-08 18:00:01,830 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-09 12:00:01,495 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-09 18:00:02,609 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-10 12:00:02,645 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-10 18:00:01,891 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-17 18:00:01,636 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-18 00:00:01,411 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-18 06:00:02,134 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-18 12:00:02,157 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-18 18:00:01,491 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-20 12:00:02,501 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-20 18:00:01,873 INFO /usr/local/bin/bench --verbose --site all backup
+2023-03-21 12:00:01,733 INFO /usr/local/bin/bench --verbose --site all backup

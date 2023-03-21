@@ -1,0 +1,17 @@
+2022-09-17 20:48:45,501 INFO scheduler Scheduled Job Complete: erpnext.healthcare.doctype.patient_appointment.patient_appointment.send_appointment_reminder for ramsay.site
+2022-09-17 20:48:45,588 INFO scheduler Scheduled Job Start: erpnext.projects.doctype.project.project.project_status_update_reminder for ramsay.site
+2022-09-17 20:48:45,917 INFO scheduler Scheduled Job Complete: erpnext.projects.doctype.project.project.project_status_update_reminder for ramsay.site
+2022-09-17 20:48:46,002 INFO scheduler Scheduled Job Start: frappe.monitor.flush for ramsay.site
+2022-09-17 20:48:46,199 INFO scheduler Scheduled Job Complete: frappe.monitor.flush for ramsay.site
+2022-09-17 20:48:46,285 INFO scheduler Scheduled Job Start: frappe.utils.global_search.sync_global_search for ramsay.site
+2022-09-17 20:48:46,482 INFO scheduler Scheduled Job Complete: frappe.utils.global_search.sync_global_search for ramsay.site
+2022-09-17 20:48:46,567 INFO scheduler Scheduled Job Start: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for ramsay.site
+2022-09-17 20:48:46,917 INFO scheduler Scheduled Job Complete: frappe.integrations.doctype.razorpay_settings.razorpay_settings.capture_payment for ramsay.site
+2022-09-17 20:48:47,005 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.notify_unreplied for ramsay.site
+2022-09-17 20:48:47,281 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.notify_unreplied for ramsay.site
+2022-09-17 20:48:47,366 INFO scheduler Scheduled Job Start: frappe.email.doctype.email_account.email_account.pull for ramsay.site
+2022-09-17 20:48:47,661 INFO scheduler Scheduled Job Complete: frappe.email.doctype.email_account.email_account.pull for ramsay.site
+2022-09-17 20:48:47,749 INFO scheduler Scheduled Job Start: frappe.email.queue.flush for ramsay.site
+2022-09-17 20:48:47,966 INFO scheduler Scheduled Job Complete: frappe.email.queue.flush for ramsay.site
+2022-09-17 20:50:45,325 INFO scheduler Scheduled Job Start: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for ramsay.site
+2022-09-17 20:50:45,660 INFO scheduler Scheduled Job Complete: erpnext.manufacturing.doctype.bom_update_log.bom_update_log.resume_bom_cost_update_jobs for ramsay.site
